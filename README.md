@@ -11,7 +11,9 @@ I don't yet know what the full name of the game or the lore of this game will be
 
 
 ============================================================================
+
 Licensing
+
 ============================================================================
 This project uses a custom license designed to protect the code, assets, and structure of the project.
 
@@ -42,5 +44,7 @@ For full legal details, see the LICENSE and NOTICE files.
 
 
 ============================================================================
+
 Devlog
+
 ============================================================================
