@@ -11,3 +11,36 @@ I don't yet know what the full name of the game or the lore of this game will be
 
 
 ============================================================================
+Licensing
+============================================================================
+This project uses a custom license designed to protect the code, assets, and structure of the project.
+
+**You ARE allowed to:**
+View and learn from the code
+
+Use small code snippets in your own projects
+
+Modify and use Maurice’s original assets in your own projects (but not redistribute them)
+
+**You are NOT allowed to:**
+Redistribute or re-upload this project
+
+Sell this project or any derivative of it
+
+Copy the entire codebase or create a near-identical clone
+
+Redistribute or resell any of the assets
+
+Use or extract the included third‑party asset
+
+**Third‑Party Asset**
+This project includes one third‑party asset that Maurice is licensed to use but cannot redistribute.
+You may not use or extract this asset under any circumstances.
+
+For full legal details, see the LICENSE and NOTICE files.
+
+
+
+============================================================================
+Devlog
+============================================================================
