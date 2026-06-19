@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://deca7xu7lt7an"]
+
+[ext_resource type="TileSet" uid="uid://rcg6l8w1rg0e" path="res://Levels/Tilesets/Forest&castle.tres" id="1_4m51g"]
+[ext_resource type="PackedScene" uid="uid://cj1d8xaw4i7jr" path="res://Player/player.tscn" id="2_5r8fy"]
+[ext_resource type="Script" uid="uid://djt425qri8v8e" path="res://General/Scripts/Level_bounds.gd" id="3_fsvcb"]
+
+[node name="01" type="Node2D" unique_id=300222902]
+
+[node name="BackGroundPlants" type="TileMapLayer" parent="." unique_id=249914998]
+position = Vector2(24, 43)
+scale = Vector2(1.5, 1.5)
+tile_set = ExtResource("1_4m51g")
+
+[node name="BackGroundTiles" type="TileMapLayer" parent="." unique_id=1563972057]
+position = Vector2(26, 17)
+tile_set = ExtResource("1_4m51g")
+
+[node name="MiddleGround" type="TileMapLayer" parent="." unique_id=1209995287]
+position = Vector2(26, 17)
+tile_map_data = PackedByteArray(0, 0, 3, 0, 8, 0, 0, 0, 4, 0, 0, 0, 0, 0, 4, 0, 8, 0, 0, 0, 5, 0, 0, 0, 0, 0, 5, 0, 8, 0, 0, 0, 6, 0, 0, 0, 0, 0, 6, 0, 8, 0, 0, 0, 7, 0, 0, 0, 0, 0, 7, 0, 8, 0, 0, 0, 8, 0, 0, 0, 0, 0)
+tile_set = ExtResource("1_4m51g")
+
+[node name="Small plants" type="TileMapLayer" parent="." unique_id=1517279369]
+position = Vector2(-422, -231)
+tile_set = ExtResource("1_4m51g")
+
+[node name="Foreground (big)" type="TileMapLayer" parent="." unique_id=1358264306]
+position = Vector2(26, 22)
+scale = Vector2(2, 2)
+tile_set = ExtResource("1_4m51g")
+
+[node name="Player" parent="." unique_id=1128227657 instance=ExtResource("2_5r8fy")]
+unique_name_in_owner = true
+position = Vector2(205, 247)
+
+[node name="LevelBounds" type="Node2D" parent="." unique_id=167523854]
+z_index = 256
+position = Vector2(-88, -304)
+script = ExtResource("3_fsvcb")
+width = 2048
+height = 878
+metadata/_custom_type_script = "uid://djt425qri8v8e"
