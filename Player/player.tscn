@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bux1enxlf5qod" path="res://Player/Scripts/player.gd" id="1_l8h54"]
 [ext_resource type="Script" uid="uid://l3xq7kj4hi6u" path="res://Player/States/Idle.gd" id="2_4ntmi"]
-[ext_resource type="Texture2D" uid="uid://be3k02p8uho03" path="res://Player/Sprites_/spritesheet.png" id="2_vtle1"]
+[ext_resource type="Texture2D" uid="uid://be3k02p8uho03" path="res://Player/Sprites_/Spritesheet.png" id="2_vtle1"]
 [ext_resource type="Script" uid="uid://bk2a3pwr2awpg" path="res://Player/States/Run.gd" id="3_btcbx"]
 [ext_resource type="Script" uid="uid://c5cpiod4bd105" path="res://Player/States/Jump.gd" id="4_k53q1"]
 [ext_resource type="Script" uid="uid://bsuxpqve8vp2l" path="res://Player/States/Fall.gd" id="5_fhl08"]
@@ -195,7 +195,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtle1"]
-size = Vector2(20, 5)
+size = Vector2(0.5, 5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1128227657]
 z_index = 150
@@ -266,3 +266,9 @@ collision_mask = 2
 unique_name_in_owner = true
 position = Vector2(0, -19)
 position_smoothing_enabled = true
+
+[node name="BreakTimer" type="Timer" parent="." unique_id=739974859]
+unique_name_in_owner = true
+
+[node name="RespawnBreakTimer" type="Timer" parent="." unique_id=764194712]
+unique_name_in_owner = true

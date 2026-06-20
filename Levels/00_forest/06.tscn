@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://buvyem4pppfls"]
+[gd_scene format=3 uid="uid://bitkok0q15as7"]
 
 [ext_resource type="TileSet" uid="uid://rcg6l8w1rg0e" path="res://Levels/Tilesets/Forest&castle.tres" id="1_3pv7x"]
 [ext_resource type="Script" uid="uid://c1qgpr7ndruj5" path="res://Levels/00_forest/middle_ground.gd" id="2_vyknr"]
@@ -18,12 +18,11 @@ tile_set = ExtResource("1_3pv7x")
 
 [node name="MiddleGround" type="TileMapLayer" parent="." unique_id=1209995287]
 position = Vector2(26, 17)
-tile_map_data = PackedByteArray("AAD//wMAAAAEAAAAAAAAAAMAAAAFAAAAAAABAAMAAAAGAAAAAAACAAMAAAAHAAAAAAADAAMAAAAIAAAAAAAFAAMAAAAHAAQAAAAGAAMAAAAIAAQAAAAHAAMAAAAJAAQAAAAIAAMAAAAKAAQAAAAJAAMAAAALAAQAAAAFAP//AAAKAAAAAAAIAP//AAANAAAAAAA=")
+tile_map_data = PackedByteArray(0, 0, 255, 255, 3, 0, 0, 0, 7, 0, 4, 0, 0, 0, 0, 0, 3, 0, 0, 0, 8, 0, 4, 0, 0, 0, 1, 0, 3, 0, 0, 0, 9, 0, 4, 0, 0, 0, 2, 0, 3, 0, 0, 0, 10, 0, 4, 0, 0, 0, 3, 0, 3, 0, 0, 0, 11, 0, 4, 0, 0, 0)
 tile_set = ExtResource("1_3pv7x")
 
 [node name="BreakablePlatforms2" type="TileMapLayer" parent="." unique_id=9861829 groups=["breakable_tilemaps"]]
 position = Vector2(26, 17)
-tile_map_data = PackedByteArray("AAADAAEAAAARAAAAAAD//wEAAAAKAAEAAAAAAAEAAAALAAEAAAABAAEAAAAMAAAAAAD8/wMAAAAKAAEAAAD9/wMAAAALAAEAAAD+/wMAAAAMAAEAAAD/////AAAQAAAAAAAAAP//AAARAAAAAAACAP//AAALAAAAAAADAP//AAAMAAAAAAAGAP//AAALAAAAAAAHAP//AAAMAAAAAAAFAAEAAAAKAAEAAAAGAAEAAAALAAEAAAAHAAEAAAAMAAEAAAAIAAEAAAANAAEAAAA=")
 tile_set = ExtResource("1_3pv7x")
 script = ExtResource("2_vyknr")
 

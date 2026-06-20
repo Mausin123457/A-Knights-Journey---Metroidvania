@@ -23,6 +23,10 @@ window/size/window_width_override=1477
 window/size/window_height_override=790
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+breakable_tilemaps=""
+
 [input]
 
 left={
@@ -84,6 +88,7 @@ parry={
 
 2d_physics/layer_1="Ground"
 2d_physics/layer_2="OneWayPlatform"
+2d_physics/layer_3="Breakable_platforms"
 
 [physics]
 
