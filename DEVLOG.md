@@ -57,3 +57,13 @@ Room 1:
 
 Room 2:
 <img width="1266" height="821" alt="Screenshot 2026-06-20 142951" src="https://github.com/user-attachments/assets/05479eb8-419f-49f2-971c-181e12ce42b2" />
+
+
+22-06-2026: This day I had another big blunder, my process is not very smooth, but that is to be expected in the beginning and shows how new I am to this and how this is all a learning process. I was working on level transitions and making those completely work, but I commited NOTHING in that entire process. When I was almost done and started fixing the little problems that were still left I started destroying everything on accident. (Mind you I was working around 11 PM at this time, I do not recommend this either...) So the bugs got bigger and bigger, and eventually it was so bad that I just had to put it out of its misery. This is when i realized I hadn't commited anything yet and that all of my progress for this entire day was just gone.
+This was very frustrating and very demotivating, but I decided to just sleep and restart the next day.
+
+24-06-2026: After a very long night and a nightmare about the previous day further, I tried again. I got the full level transition system back and this time I decided to commit my changes more often. Sure enough I got back to where I left off the previous day, with the exact same bug again. I commited yet again, actually fixed the bug this time and I felt so relieved. It was such a good feeling that I was even unable to continue, I just closed the project for the day and didn't touch it again.
+
+25-06-2026: Today I just fixed some unwanted behaviour and some small bugs still left in the system. Not that much progress here.
+
+26-06-2026: For this day I wanted to create a bit more visual appeal to my first rooms, so I added parallax layers, a background, a fog gradient, light streaks, a small light surrounding the player, an animated plant, animated torch and some trees and bushes. I will drop some screenshots from the game below, this is only the first room, but this is the style that I will be using throughout the entire first area, the forest.
