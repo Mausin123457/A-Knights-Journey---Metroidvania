@@ -18,6 +18,8 @@ func exit() -> void:
 
 # What happens when an input comes in as were in this state?
 func handle_input( event : InputEvent ) -> PlayerState:
+	if SceneManager.allow_input == false:
+		return
 	if event.is_action_pressed("jump"):
 		return jump	
 	return next_state

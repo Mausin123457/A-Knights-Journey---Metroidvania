@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bhe72lylec405"]
+
+[ext_resource type="Texture2D" uid="uid://cfeqy5wbwyrj7" path="res://Levels/Tilesets/sprites/Tileset forest and castle.png" id="1_xmhlx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cl2u"]
+atlas = ExtResource("1_xmhlx")
+region = Rect2(768, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3n6u"]
+atlas = ExtResource("1_xmhlx")
+region = Rect2(800, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ineqx"]
+atlas = ExtResource("1_xmhlx")
+region = Rect2(832, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph3v0"]
+atlas = ExtResource("1_xmhlx")
+region = Rect2(864, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_387fj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cl2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3n6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ineqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph3v0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ineqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3n6u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="AnimatedPlant" type="AnimatedSprite2D" unique_id=1435026172]
+position = Vector2(-1, -14)
+sprite_frames = SubResource("SpriteFrames_387fj")
+autoplay = "default"
+frame_progress = 0.13079171

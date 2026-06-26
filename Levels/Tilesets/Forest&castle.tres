@@ -2,6 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://cfeqy5wbwyrj7" path="res://Levels/Tilesets/sprites/Tileset forest and castle.png" id="1_wi8pc"]
 
+[sub_resource type="TileMapPattern" id="TileMapPattern_wi8pc"]
+tile_data = PackedInt32Array(0, 1114112, 2, 589824, 1114112, 10, 1, 1179648, 2, 65537, 1179648, 3, 131073, 1179648, 4, 524289, 1179648, 9, 589825, 1179648, 10, 2, 1245184, 2, 65538, 1245184, 3, 131074, 1245184, 4, 196610, 1245184, 5, 262146, 1245184, 6, 327682, 1245184, 7, 393218, 1245184, 8, 458754, 1245184, 9, 524290, 1245184, 9, 589826, 1245184, 10, 3, 1310720, 2, 65539, 1310720, 3, 327683, 1310720, 7, 589827, 1310720, 10)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_t14sp"]
+tile_data = PackedInt32Array(65536, 917504, 6, 131072, 917504, 7, 196608, 917504, 8, 262144, 917504, 9, 1, 983040, 5, 65537, 983040, 6, 131073, 983040, 7, 196609, 983040, 8, 262145, 983040, 9, 327681, 983040, 10, 393217, 983040, 11, 65538, 1048576, 6, 131074, 1048576, 7, 196610, 1048576, 8, 262146, 1048576, 9)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t14sp"]
 texture = ExtResource("1_wi8pc")
 texture_region_size = Vector2i(32, 32)
@@ -140,7 +146,7 @@ texture_region_size = Vector2i(32, 32)
 17:0/0/physics_layer_2/polygon_0/points = PackedVector2Array(-16, -9, -16, 16, 16, 16, 16, -9)
 17:0/0/physics_layer_2/polygon_0/one_way = true
 18:0/0 = 0
-18:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+18:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, -3, -16, -3.1269875, -10, -13, -10, -13, 16, 16, 16)
 11:4/0 = 0
 11:4/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, -10, 16, -10, 16, 16, -16, 16)
 11:4/0/physics_layer_1/polygon_0/one_way = true
@@ -308,6 +314,26 @@ texture_region_size = Vector2i(32, 32)
 21:12/0 = 0
 21:13/0 = 0
 21:14/0 = 0
+29:4/0 = 0
+30:4/0 = 0
+30:5/0 = 0
+30:6/0 = 0
+30:7/0 = 0
+30:8/0 = 0
+30:9/0 = 0
+30:10/0 = 0
+30:11/0 = 0
+30:12/0 = 0
+30:13/0 = 0
+29:13/0 = 0
+29:12/0 = 0
+29:11/0 = 0
+29:10/0 = 0
+29:9/0 = 0
+29:8/0 = 0
+29:7/0 = 0
+29:6/0 = 0
+29:5/0 = 0
 
 [resource]
 tile_size = Vector2i(32, 32)
@@ -318,3 +344,5 @@ physics_layer_1/collision_mask = 0
 physics_layer_2/collision_layer = 4
 physics_layer_2/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_t14sp")
+pattern_0 = SubResource("TileMapPattern_wi8pc")
+pattern_1 = SubResource("TileMapPattern_t14sp")

@@ -21,6 +21,8 @@ func exit() -> void:
 
 # What happens when an input comes in as were in this state?
 func handle_input( event : InputEvent ) -> PlayerState:
+	if SceneManager.allow_input == false:
+		return
 	if event.is_action_pressed("jump"):
 		if player.one_way_platform_shape_cast.is_colliding():
 			player.position.y += 4

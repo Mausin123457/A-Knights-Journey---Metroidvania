@@ -56,15 +56,18 @@ func _process(_delta: float) -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	velocity.y += gravity * _delta * gravity_multiplier
-	velocity.y = clampf(velocity.y, -1000, max_fall_velocity)
-	move_and_slide()
-	change_state(current_state.physics_process(_delta))
+	if SceneManager.allow_input == false:
+		return
+	else:
+		velocity.y += gravity * _delta * gravity_multiplier
+		velocity.y = clampf(velocity.y, -1000, max_fall_velocity)
+		move_and_slide()
+		change_state(current_state.physics_process(_delta))
 
-	if is_on_floor():
-		var info = get_breakable_tile_below()
-		if info:
-			info["tilemap"].break_tile(info["cell"])
+		if is_on_floor():
+			var info = get_breakable_tile_below()
+			if info:
+				info["tilemap"].break_tile(info["cell"])
 
 
 

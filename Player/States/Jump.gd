@@ -32,6 +32,8 @@ func exit() -> void:
 
 # What happens when an input comes in as were in this state?
 func handle_input( event : InputEvent ) -> PlayerState:
+	if SceneManager.allow_input == false:
+		return
 	if event.is_action_released("jump"):
 		player.velocity.y *= 0.3
 		return fall

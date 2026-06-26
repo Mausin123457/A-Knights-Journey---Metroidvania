@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cp6kxnf0o5kcf"]
+
+[ext_resource type="Texture2D" uid="uid://cfeqy5wbwyrj7" path="res://Levels/Tilesets/sprites/Tileset forest and castle.png" id="1_0c3oa"]
+[ext_resource type="Script" uid="uid://b46vi7i8leigy" path="res://General/Scripts/light_flicker.gd" id="2_u0qr2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0qr2"]
+atlas = ExtResource("1_0c3oa")
+region = Rect2(800, 448, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2una"]
+atlas = ExtResource("1_0c3oa")
+region = Rect2(832, 448, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4exo6"]
+atlas = ExtResource("1_0c3oa")
+region = Rect2(864, 448, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kvg2"]
+atlas = ExtResource("1_0c3oa")
+region = Rect2(896, 448, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qba6l"]
+atlas = ExtResource("1_0c3oa")
+region = Rect2(928, 448, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wubvs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0qr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2una")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4exo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kvg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qba6l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_v2una"]
+offsets = PackedFloat32Array(0, 0.44471154, 0.6706731, 1)
+colors = PackedColorArray(1.1730844, 1.1730844, 1.1730844, 1, 1.1730844, 0.85810316, 0.49290752, 1, 0.71044844, 0.15693344, 0.13095504, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4exo6"]
+gradient = SubResource("Gradient_v2una")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="Torch" type="AnimatedSprite2D" unique_id=1902024630]
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_wubvs")
+autoplay = "default"
+frame_progress = 0.17713359
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1628600190]
+energy = 0.7
+texture = SubResource("GradientTexture2D_4exo6")
+script = ExtResource("2_u0qr2")

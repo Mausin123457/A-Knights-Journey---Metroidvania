@@ -5,7 +5,7 @@ signal new_scene_ready(target_name: String, offset: Vector2)
 signal load_scene_finished
 
 @onready var fade: Control = $Fade
-
+var allow_input: bool = true
 
 func _ready() -> void:
 	fade.visible = false
@@ -18,6 +18,8 @@ func transition_scene(new_scene: String, target_area: String, player_offset: Vec
 	get_tree().paused = true
 	
 	var fade_pos : Vector2 = get_fade_pos(dir)
+	
+	allow_input = false
 	
 	fade.visible = true
 	
@@ -39,6 +41,8 @@ func transition_scene(new_scene: String, target_area: String, player_offset: Vec
 	
 	
 	load_scene_finished.emit()
+	
+	allow_input = true
 	
 	pass
 
