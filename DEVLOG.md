@@ -67,3 +67,22 @@ This was very frustrating and very demotivating, but I decided to just sleep and
 25-06-2026: Today I just fixed some unwanted behaviour and some small bugs still left in the system. Not that much progress here.
 
 26-06-2026: For this day I wanted to create a bit more visual appeal to my first rooms, so I added parallax layers, a background, a fog gradient, light streaks, a small light surrounding the player, an animated plant, animated torch and some trees and bushes. I will drop some screenshots from the game below, this is only the first room, but this is the style that I will be using throughout the entire first area, the forest.
+
+Two in game screenshots of the first level (don't mind the state text above the player, this will obviously be gone in the actual game):
+
+<img width="1445" height="791" alt="Screenshot 2026-06-27 114148" src="https://github.com/user-attachments/assets/a7143a2c-5a28-43f6-a0e0-f46c6a1a13d8" />
+
+============================================================================
+
+
+<img width="1407" height="796" alt="Screenshot 2026-06-27 114212" src="https://github.com/user-attachments/assets/514e022e-2da1-46ff-a56a-9d87003470ba" />
+
+
+And this is a screenshot of the design for the second level, still in the editor:
+
+
+<img width="492" height="355" alt="Screenshot 2026-06-27 114234" src="https://github.com/user-attachments/assets/e22f1db9-74f9-4b79-84d5-3c6dfb2763a5" />
+
+============================================================================
+
+
