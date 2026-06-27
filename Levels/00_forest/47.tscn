@@ -17,7 +17,7 @@ height = 256
 fill_from = Vector2(0, 1)
 fill_to = Vector2(0, 0)
 
-[node name="01" type="Node2D" unique_id=300222902]
+[node name="47" type="Node2D" unique_id=300222902]
 
 [node name="SkyGradient" type="Parallax2D" parent="." unique_id=1076723525]
 modulate = Color(0.20952892, 0.24335417, 0.2925546, 1)

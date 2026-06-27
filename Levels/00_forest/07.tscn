@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cj1d8xaw4i7jr" path="res://Player/player.tscn" id="3_tfak7"]
 [ext_resource type="Script" uid="uid://djt425qri8v8e" path="res://General/Scripts/Level_bounds.gd" id="4_fa1uv"]
 [ext_resource type="PackedScene" uid="uid://d3r7tp3msdhg6" path="res://General/level_transition/level_transition.tscn" id="5_gifbt"]
+[ext_resource type="Texture2D" uid="uid://dbb6qj06g0n3i" path="res://Levels/Tilesets/sprites/light_stream.jpg" id="6_82eax"]
 
 [sub_resource type="Gradient" id="Gradient_g21jb"]
 offsets = PackedFloat32Array(0.016826924, 1)
@@ -17,7 +18,11 @@ height = 256
 fill_from = Vector2(0, 1)
 fill_to = Vector2(0, 0)
 
-[node name="01" type="Node2D" unique_id=300222902]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tfak7"]
+blend_mode = 1
+light_mode = 1
+
+[node name="07" type="Node2D" unique_id=300222902]
 
 [node name="SkyGradient" type="Parallax2D" parent="." unique_id=1076723525]
 modulate = Color(0.20952892, 0.24335417, 0.2925546, 1)
@@ -66,8 +71,33 @@ scale = Vector2(1.5, 1.5)
 tile_set = ExtResource("1_r3lre")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=516188963]
-position = Vector2(960.9999, 335)
+position = Vector2(957, 126.000015)
 scale = Vector2(8.4921875, 1.8789064)
+texture = SubResource("GradientTexture2D_fsvcb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=627779783]
+position = Vector2(294.99997, 167.1875)
+scale = Vector2(0.87695324, 1.6157228)
+texture = SubResource("GradientTexture2D_fsvcb")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=339616151]
+position = Vector2(679.00006, 173)
+scale = Vector2(0.87695324, 1.6157228)
+texture = SubResource("GradientTexture2D_fsvcb")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=694332955]
+position = Vector2(1193, 158)
+scale = Vector2(0.87695324, 1.6157228)
+texture = SubResource("GradientTexture2D_fsvcb")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1910857565]
+position = Vector2(1514.9999, 114)
+scale = Vector2(0.87695324, 1.6157228)
+texture = SubResource("GradientTexture2D_fsvcb")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=258520730]
+position = Vector2(1802, 113.99999)
+scale = Vector2(0.87695324, 1.6157228)
 texture = SubResource("GradientTexture2D_fsvcb")
 
 [node name="SmallPlants" type="TileMapLayer" parent="." unique_id=27145737]
@@ -82,7 +112,7 @@ tile_set = ExtResource("1_r3lre")
 
 [node name="MiddleGround" type="TileMapLayer" parent="." unique_id=339509978]
 position = Vector2(26, 17)
-tile_map_data = PackedByteArray("AAAAAAgAAAAEAAAAAAABAAgAAAAFAAAAAAACAAgAAAAGAAAAAAADAAgAAAAHAAAAAAAEAAgAAAAIAAAAAAA=")
+tile_map_data = PackedByteArray("AAD8/wIAAAAFAAEAAAD9/wIAAAAGAAEAAAD+/wIAAAAHAAEAAAD//wIAAAAFAAEAAAAAAAIAAAAGAAEAAAABAAIAAAAHAAEAAAACAAIAAAAFAAEAAAADAAIAAAAGAAEAAAAEAAIAAAAIAAEAAAADAAQAAAAHAAIAAAAEAAQAAAAIAAIAAAAAAAQAAAAHAAIAAAABAAQAAAAFAAIAAAACAAQAAAAGAAIAAAAAAAMAAAAFAAEAAAABAAMAAAAGAAEAAAACAAMAAAAHAAEAAAD9/wMAAAAFAAEAAAD+/wMAAAAGAAEAAAD//wMAAAAHAAEAAAADAAMAAAAFAAEAAAAEAAMAAAAIAAEAAAD7/wMAAAAEAAEAAAD8/wMAAAAHAAEAAAD9/wQAAAAGAAIAAAD+/wQAAAAHAAIAAAD//wQAAAAGAAIAAAAOAAEAAAAGAAIAAAAPAAEAAAAHAAIAAAAQAAEAAAAIAAIAAAAOAAAAAAAHAAEAAAAPAAAAAAAGAAEAAAAQAAAAAAAIAAEAAAAOAP//AAAGAAAAAAAPAP//AAAHAAAAAAAQAP//AAAIAAAAAAAeAAEAAAAGAAIAAAAfAAEAAAAHAAIAAAAgAAEAAAAIAAIAAAAeAAAAAAAHAAEAAAAfAAAAAAAGAAEAAAAgAAAAAAAIAAEAAAAeAP//AAAGAAAAAAAfAP//AAAHAAAAAAAgAP//AAAIAAAAAAAcAP//AAAGAAAAAAAdAP//AAAHAAAAAAAZAP//AAAFAAAAAAAaAP//AAAGAAAAAAAbAP//AAAHAAAAAAAYAP//AAAEAAAAAAAZAAEAAAAFAAIAAAAaAAEAAAAGAAIAAAAbAAEAAAAHAAIAAAAZAAAAAAAGAAEAAAAaAAAAAAAHAAEAAAAbAAAAAAAHAAEAAAAcAAAAAAAFAAEAAAAdAAAAAAAGAAEAAAAcAAEAAAAGAAIAAAAdAAEAAAAFAAIAAAAYAAEAAAAEAAIAAAAMAP//AAAEAAAAAAANAP//AAAFAAAAAAANAAEAAAAFAAIAAAAMAAAAAAAEAAEAAAANAAAAAAAGAAEAAAD7/wEAAAAEAAEAAAD8/wEAAAAGAAEAAAD9/wEAAAAFAAEAAAD7/wAAAAAEAAEAAAD8/wAAAAAGAAEAAAD9/wAAAAAFAAEAAAD7////AAAFAAAAAAD8////AAAGAAAAAAD9////AAAGAAAAAAD/////AAAGAAAAAAAAAP//AAAGAAAAAAABAP//AAAFAAAAAAD+////AAAFAAAAAAD+/wAAAAAGAAEAAAD//wAAAAAHAAEAAAD+/wEAAAAGAAEAAAD//wEAAAAHAAEAAAAAAAEAAAAFAAEAAAABAAEAAAAGAAEAAAACAAEAAAAFAAEAAAAAAAAAAAAFAAEAAAABAAAAAAAGAAEAAAACAAAAAAAFAAEAAAACAP//AAAGAAAAAAADAP//AAAHAAAAAAAEAP//AAAIAAAAAAADAAAAAAAGAAEAAAAEAAAAAAAIAAEAAAADAAEAAAAGAAEAAAAEAAEAAAAIAAEAAAAMAAEAAAAEAAIAAAAmAP3/AAAKAAIAAAAnAP3/AAALAAIAAAAoAP3/AAAMAAIAAAApAP3/AAANAAIAAAAqAP3/AAAOAAIAAAAyAP3/AAAKAAIAAAAzAP3/AAALAAIAAAA0AP3/AAAMAAIAAAA1AP3/AAANAAIAAAA2AP3/AAANAAIAAAA3AP3/AAAOAAIAAAA6AAAAAAAEAAIAAAA7AAAAAAAFAAIAAAA8AAAAAAAGAAIAAAA6AP//AAAEAAEAAAA7AP//AAAFAAEAAAA8AP//AAAGAAEAAAA6AP7/AAAEAAAAAAA7AP7/AAAFAAAAAAA8AP7/AAAGAAAAAAA9AP7/AAAHAAAAAAA+AP7/AAAIAAAAAAA9AP//AAAHAAEAAAA+AP//AAAIAAEAAAA9AAAAAAAHAAIAAAA+AAAAAAAIAAIAAAD8/wQAAAAFAAIAAAD7/wQAAAAEAAIAAAD7/wIAAAAEAAEAAAAYAAAAAAAEAAEAAAA=")
 tile_set = ExtResource("1_r3lre")
 
 [node name="BreakablePlatforms" type="TileMapLayer" parent="." unique_id=1312912259 groups=["breakable_tilemaps"]]
@@ -102,24 +132,38 @@ tile_set = ExtResource("1_r3lre")
 
 [node name="Player" parent="." unique_id=1128227657 instance=ExtResource("3_tfak7")]
 unique_name_in_owner = true
-position = Vector2(92, 273)
+position = Vector2(-55, -18)
 
 [node name="LevelBounds" type="Node2D" parent="." unique_id=14480635]
 z_index = 256
 position = Vector2(-88, -304)
 script = ExtResource("4_fa1uv")
 width = 2048
-height = 878
+height = 462
 metadata/_custom_type_script = "uid://djt425qri8v8e"
 
 [node name="LevelTransition" parent="." unique_id=1901101309 instance=ExtResource("5_gifbt")]
-position = Vector2(25, 272)
+position = Vector2(-93, -17)
 size = 4
 location = 0
 target_level = "uid://c0kgtnhwnmy3q"
 target_area_name = "LevelTransition3"
 
 [node name="LevelTransition2" parent="." unique_id=1058071584 instance=ExtResource("5_gifbt")]
-position = Vector2(571, 302)
+position = Vector2(1968, -52)
 size = 4
 target_level = "uid://ba1u754nbgoqc"
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=665205396]
+energy = 0.3
+blend_mode = 1
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1523247950]
+modulate = Color(0.7254902, 0.69411767, 0.38431373, 0.6509804)
+z_index = 150
+material = SubResource("CanvasItemMaterial_tfak7")
+position = Vector2(2652, -239.99995)
+rotation = 0.500406
+scale = Vector2(0.81716007, 2.1709502)
+texture = ExtResource("6_82eax")
+offset = Vector2(0, 256)
