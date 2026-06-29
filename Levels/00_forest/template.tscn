@@ -2,9 +2,10 @@
 
 [ext_resource type="TileSet" uid="uid://rcg6l8w1rg0e" path="res://Levels/Tilesets/Forest&castle.tres" id="1_3pv7x"]
 [ext_resource type="Script" uid="uid://c1qgpr7ndruj5" path="res://Levels/00_forest/middle_ground.gd" id="2_vyknr"]
-[ext_resource type="PackedScene" uid="uid://cj1d8xaw4i7jr" path="res://Player/player.tscn" id="3_vun35"]
 [ext_resource type="PackedScene" uid="uid://d3r7tp3msdhg6" path="res://General/level_transition/level_transition.tscn" id="4_5r8fy"]
 [ext_resource type="Script" uid="uid://djt425qri8v8e" path="res://General/Scripts/Level_bounds.gd" id="4_dyxq0"]
+[ext_resource type="PackedScene" uid="uid://blffvd72ovtgo" path="res://General/PlayerSpawn/player_spawn.tscn" id="6_8kus6"]
+[ext_resource type="Texture2D" uid="uid://dbb6qj06g0n3i" path="res://Levels/Tilesets/sprites/light_stream.jpg" id="6_w47kl"]
 
 [sub_resource type="Gradient" id="Gradient_g21jb"]
 offsets = PackedFloat32Array(0.016826924, 1)
@@ -16,6 +17,10 @@ width = 256
 height = 256
 fill_from = Vector2(0, 1)
 fill_to = Vector2(0, 0)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8kus6"]
+blend_mode = 1
+light_mode = 1
 
 [node name="01" type="Node2D" unique_id=300222902]
 
@@ -82,12 +87,10 @@ tile_set = ExtResource("1_3pv7x")
 
 [node name="MiddleGround" type="TileMapLayer" parent="." unique_id=339509978]
 position = Vector2(26, 17)
-tile_map_data = PackedByteArray("AAAAAAgAAAAEAAAAAAABAAgAAAAFAAAAAAACAAgAAAAGAAAAAAADAAgAAAAHAAAAAAAEAAgAAAAIAAAAAAA=")
 tile_set = ExtResource("1_3pv7x")
 
 [node name="BreakablePlatforms" type="TileMapLayer" parent="." unique_id=1312912259 groups=["breakable_tilemaps"]]
 position = Vector2(26, 17)
-tile_map_data = PackedByteArray("AAAGAAcAAAAKAAEAAAAHAAcAAAALAAEAAAAIAAcAAAAMAAEAAAAJAAcAAAANAAEAAAA=")
 tile_set = ExtResource("1_3pv7x")
 script = ExtResource("2_vyknr")
 
@@ -101,10 +104,6 @@ position = Vector2(26, 22)
 scale = Vector2(2, 2)
 tile_set = ExtResource("1_3pv7x")
 
-[node name="Player" parent="." unique_id=1128227657 instance=ExtResource("3_vun35")]
-unique_name_in_owner = true
-position = Vector2(92, 273)
-
 [node name="LevelBounds" type="Node2D" parent="." unique_id=14480635]
 z_index = 256
 position = Vector2(-88, -304)
@@ -117,3 +116,34 @@ metadata/_custom_type_script = "uid://djt425qri8v8e"
 position = Vector2(1967, 497)
 size = 4
 target_level = "uid://c0kgtnhwnmy3q"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1421783147]
+
+[node name="Foreground" type="Parallax2D" parent="." unique_id=1902239163]
+z_index = 151
+scroll_scale = Vector2(1.5, 1)
+
+[node name="parallax_plants" type="TileMapLayer" parent="Foreground" unique_id=932111462]
+modulate = Color(0, 0, 0, 1)
+z_index = 10
+position = Vector2(24, 43)
+scale = Vector2(1.5, 1.5)
+tile_set = ExtResource("1_3pv7x")
+
+[node name="Props" type="Node2D" parent="." unique_id=1000972174]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1017181996]
+energy = 0.3
+blend_mode = 1
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=2135078231]
+modulate = Color(0.7254902, 0.69411767, 0.38431373, 0.4392157)
+z_index = 150
+material = SubResource("CanvasItemMaterial_8kus6")
+position = Vector2(647.3514, -113.85715)
+rotation = 0.4981478
+scale = Vector2(0.5687871, 1.0058107)
+texture = ExtResource("6_w47kl")
+offset = Vector2(0, 256)
+
+[node name="PlayerSpawn" parent="." unique_id=467086922 instance=ExtResource("6_8kus6")]
