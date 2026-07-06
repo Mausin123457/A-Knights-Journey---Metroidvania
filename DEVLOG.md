@@ -86,3 +86,9 @@ And this is a screenshot of the design for the second level, still in the editor
 ============================================================================
 
 
+
+CHAPTER 5: Back after a little break
+
+============================================================================
+
+6-7-2026: I took quite a big "break" from any progress in this game, and that is because I was working on a different, way smaller game. A game that I and a friend of mine made together for a game jam. It is not perfect by any means at the moment, but maybe we will come back to update the game further, who knows. The game is called "Chip Chain". I will put a link to the game below this, if anyone wants to check it out :). Anyway I am back and I will be putting my focus back on this game again, first thing I will be working on after coming back is a save and load system! I will keep everything updated in here for those interested.
