@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cpjadv5nutccs"]
+
+[ext_resource type="Texture2D" uid="uid://5wqnhqdhbcps" path="res://00_Global/campfire_sprites/Campfire1.png" id="1_0d0i7"]
+[ext_resource type="Texture2D" uid="uid://8x1s76fsomik" path="res://00_Global/campfire_sprites/Campfire2.png" id="2_vm44o"]
+[ext_resource type="Texture2D" uid="uid://dh7d87l3ho0kh" path="res://00_Global/campfire_sprites/Campfire3.png" id="3_o52ka"]
+[ext_resource type="Texture2D" uid="uid://bwesg3igigx34" path="res://00_Global/campfire_sprites/Campfire4.png" id="4_aod5l"]
+[ext_resource type="Texture2D" uid="uid://doggguxm5p4n0" path="res://00_Global/campfire_sprites/Campfire5.png" id="5_hu6jn"]
+[ext_resource type="Script" uid="uid://b46vi7i8leigy" path="res://General/Scripts/light_flicker.gd" id="6_vm44o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hfuxe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0d0i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vm44o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_o52ka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_aod5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hu6jn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_v2una"]
+offsets = PackedFloat32Array(0, 0.31009614, 0.75240386, 1)
+colors = PackedColorArray(1.1730844, 0.85810316, 0.49290752, 1, 0.9051133, 0.19083661, 0.15731311, 1, 0.3579473, 0.016046593, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o52ka"]
+gradient = SubResource("Gradient_v2una")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_aod5l"]
+offsets = PackedFloat32Array(0, 0.24509804, 0.57843137, 0.996732)
+colors = PackedColorArray(0.96824783, 0.94602644, 0.12753293, 1, 0.9892927, 0.836566, 0.29165608, 1, 0.9892927, 0.6172112, 0.20837802, 1, 0.61960787, 0.02745098, 0.019607844, 0.09019608)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_v2una"]
+gradient = SubResource("Gradient_aod5l")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hu6jn"]
+particle_flag_disable_z = true
+direction = Vector3(0, -20, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 300.0
+angular_velocity_min = -200.00002
+angular_velocity_max = 199.99998
+gravity = Vector3(0, 98, 0)
+color_ramp = SubResource("GradientTexture1D_v2una")
+turbulence_enabled = true
+turbulence_influence_max = 0.25
+turbulence_initial_displacement_min = -19.999998
+turbulence_initial_displacement_max = 20.000002
+
+[node name="Campfire" type="AnimatedSprite2D" unique_id=1895043421]
+position = Vector2(-0.99999994, -22)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_hfuxe")
+autoplay = "default"
+frame_progress = 0.4589471
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=588278813]
+position = Vector2(1.5, 10.500004)
+scale = Vector2(0.59765625, 0.62890625)
+energy = 0.7
+texture = SubResource("GradientTexture2D_o52ka")
+script = ExtResource("6_vm44o")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1182037631]
+position = Vector2(2, 13)
+amount = 6
+speed_scale = 0.5
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_hu6jn")
