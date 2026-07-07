@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://rcg6l8w1rg0e" path="res://Levels/Tilesets/Forest&castle.tres" id="1_7qh6m"]
 [ext_resource type="PackedScene" uid="uid://d3r7tp3msdhg6" path="res://General/level_transition/level_transition.tscn" id="1_g21jb"]
-[ext_resource type="PackedScene" uid="uid://cj1d8xaw4i7jr" path="res://Player/player.tscn" id="2_urk2q"]
+[ext_resource type="PackedScene" uid="uid://blffvd72ovtgo" path="res://General/PlayerSpawn/player_spawn.tscn" id="2_x3n6u"]
 [ext_resource type="Script" uid="uid://djt425qri8v8e" path="res://General/Scripts/Level_bounds.gd" id="3_6vt78"]
 [ext_resource type="PackedScene" uid="uid://bhe72lylec405" path="res://Levels/Props/animated_plant.tscn" id="5_tqmmv"]
 [ext_resource type="PackedScene" uid="uid://cp6kxnf0o5kcf" path="res://Levels/Props/Torch.tscn" id="6_6cl2u"]
@@ -108,9 +108,8 @@ position = Vector2(26, 22)
 scale = Vector2(2, 2)
 tile_set = ExtResource("1_7qh6m")
 
-[node name="Player" parent="." unique_id=1128227657 instance=ExtResource("2_urk2q")]
+[node name="PlayerSpawn" parent="." unique_id=467086922 instance=ExtResource("2_x3n6u")]
 unique_name_in_owner = true
-z_index = 100
 position = Vector2(92, 273)
 
 [node name="LevelBounds" type="Node2D" parent="." unique_id=167523854]

@@ -28,6 +28,16 @@ var previous_state : PlayerState:
 	get: return states[1]
 #endregion
 
+
+#region /// Stats
+var hp: float = 20.0
+var max_hp: float = 20.0
+var dash: bool = false
+var wall_jump: bool = false
+var parry: bool = false
+#endregion
+
+
 #region /// Standard variables
 var direction : Vector2 = Vector2.ZERO
 var gravity : float = 980
