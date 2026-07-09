@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://b1skfx7p5ykib"]
+
+[node name="TitleScreen" type="CanvasLayer" unique_id=9630580]
+layer = 5

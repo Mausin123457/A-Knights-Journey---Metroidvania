@@ -69,7 +69,7 @@ turbulence_initial_displacement_max = 20.000002
 size = Vector2(42.000023, 33.42858)
 
 [sub_resource type="Animation" id="Animation_noehu"]
-length = 3.0000000000000004
+length = 1.5
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -134,7 +134,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.4, 0.6, 2.6, 3),
 "transitions": PackedFloat32Array(-2, -2, -2, -2, -2),
 "update": 0,
-"values": [Vector2(-41.429, 20), Vector2(-41.429, -20), Vector2(-41.429, -15), Vector2(-41.429, -15), Vector2(-41.42857, 19.999996)]
+"values": [Vector2(-41.429, 20), Vector2(-41.429, -40), Vector2(-41.429, -35), Vector2(-41.429, -35), Vector2(-41.42857, 19.999996)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false

@@ -30,7 +30,7 @@ var previous_state : PlayerState:
 
 
 #region /// Stats
-var hp: float = 15.0
+var hp: float = 20.0
 var max_hp: float = 20.0
 var dash: bool = false
 var wall_jump: bool = false
@@ -101,7 +101,6 @@ func initialize_states() -> void:
 
 	change_state(current_state)
 	current_state.enter()
-	$Label.text = current_state.name
 
 
 func change_state(new_state : PlayerState) -> void:
@@ -116,7 +115,6 @@ func change_state(new_state : PlayerState) -> void:
 	states.push_front(new_state)
 	current_state.enter()
 	states.resize(3)
-	$Label.text = current_state.name
 
 
 func update_direction() -> void:
