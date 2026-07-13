@@ -30,8 +30,8 @@ func create_new_game_save(slot: int) -> void:
 		"scene_path" : new_game_scene,
 		"x" : 92,
 		"y" : 273,
-		"hp" : 20,
-		"max_hp" : 20,
+		"hp" : 5,
+		"max_hp" : 5,
 		"dash" : false,
 		"parry" : false,
 		"wall_jump" : false,
@@ -91,8 +91,8 @@ func setup_player() -> void:
 		player = get_tree().get_first_node_in_group("Player")
 		await get_tree().process_frame
 	
-	player.max_hp = save_data.get("max_hp", 20)
-	player.hp = save_data.get("hp", 20)
+	player.max_hp = save_data.get("max_hp", 5)
+	player.hp = save_data.get("hp", 5)
 	
 	player.dash = save_data.get("dash", false)
 	player.wall_jump = save_data.get("wall_jump", false)

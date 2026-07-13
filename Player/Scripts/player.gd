@@ -30,8 +30,16 @@ var previous_state : PlayerState:
 
 
 #region /// Stats
-var hp: float = 20.0
-var max_hp: float = 20.0
+var hp: int = 5:
+	set(value):
+		hp = clampi(value, 0, 5)
+		Messages.player_health_changed.emit(hp, max_hp)
+
+var max_hp: int = 5:
+	set(value):
+		max_hp = clampi(value, 0, 5)
+		Messages.player_health_changed.emit(hp, max_hp)
+
 var dash: bool = false
 var wall_jump: bool = false
 var parry: bool = false
@@ -50,6 +58,15 @@ var original_sprite_pos: Vector2
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("action"):
 		Messages.player_interacted.emit(self)
+	
+	if event is InputEventKey and event.is_pressed():
+		if event.keycode == KEY_MINUS:
+			hp -= 1
+			print(hp)
+		elif event.keycode == KEY_EQUAL:
+			hp += 1
+			print(hp)
+	
 	change_state(current_state.handle_input(event))
 	pass
 
@@ -60,6 +77,7 @@ func _ready() -> void:
 	
 	initialize_states()
 	self.call_deferred("reparent", get_tree().root)
+	PlayerHud.visible = true
 	Messages.player_healed.connect(on_player_healed)
 	pass
 
@@ -163,7 +181,7 @@ func get_breakable_tile_below() -> Dictionary:
 	return {}
 
 
-func on_player_healed(amount: float) -> void:
+func on_player_healed(amount: int) -> void:
 	hp += amount
 	print("healed: ", amount)
 	pass

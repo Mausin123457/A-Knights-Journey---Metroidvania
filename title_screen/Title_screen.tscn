@@ -23,7 +23,7 @@ blend_mode = 1
 light_mode = 1
 
 [node name="TitleScreen" type="CanvasLayer" unique_id=9630580]
-layer = 5
+layer = 0
 script = ExtResource("1_pnjtn")
 
 [node name="Control" type="Control" parent="." unique_id=178945008]
@@ -182,10 +182,6 @@ frame_progress = 0.0
 [node name="Torch4" parent="Control/TileMapContainer/Props" unique_id=695773351 instance=ExtResource("3_pnjtn")]
 position = Vector2(1795, 373)
 frame_progress = 0.0
-
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Control/TileMapContainer" unique_id=574267311]
-energy = 0.3
-blend_mode = 1
 
 [node name="Sprite2D2" type="Sprite2D" parent="Control/TileMapContainer" unique_id=1833630419]
 modulate = Color(0.7254902, 0.69411767, 0.38431373, 0.4392157)

@@ -19,6 +19,8 @@ extends CanvasLayer
 
 
 func _ready() -> void:
+	PlayerHud.visible = false
+	
 	new_game_button.pressed.connect(show_new_game_menu)
 	load_game_button.pressed.connect(show_load_game_menu)
 	

@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bfdo25ntljqhi"]
+
+[ext_resource type="Texture2D" uid="uid://mqehy8f5e54c" path="res://00_Global/player_hud/Health_bar-sheet.png" id="1_67726"]
+[ext_resource type="Script" uid="uid://sjrw0w3srvsr" path="res://00_Global/player_hud/player_hud.gd" id="1_l2iqc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkyxp"]
+atlas = ExtResource("1_67726")
+region = Rect2(0, 75, 95, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ub1ov"]
+atlas = ExtResource("1_67726")
+region = Rect2(0, 60, 95, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ux2au"]
+atlas = ExtResource("1_67726")
+region = Rect2(0, 45, 95, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdmhg"]
+atlas = ExtResource("1_67726")
+region = Rect2(0, 30, 95, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2iqc"]
+atlas = ExtResource("1_67726")
+region = Rect2(0, 15, 95, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67726"]
+atlas = ExtResource("1_67726")
+region = Rect2(0, 0, 95, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b7hpn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkyxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ub1ov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ux2au")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdmhg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2iqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67726")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PlayerHud" type="CanvasLayer" unique_id=2101940203]
+layer = 2
+script = ExtResource("1_l2iqc")
+
+[node name="Control" type="Control" parent="." unique_id=1967024058]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control" unique_id=1329578421]
+position = Vector2(53, 18)
+sprite_frames = SubResource("SpriteFrames_b7hpn")
+autoplay = "default"
+frame_progress = 0.649464
