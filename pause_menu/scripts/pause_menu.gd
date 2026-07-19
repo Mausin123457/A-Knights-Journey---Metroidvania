@@ -20,9 +20,49 @@ func _ready() -> void:
 	else:
 		PlayerHud.visible = true
 	
+	show_pause_screen()
+	return_button.pressed.connect(show_pause_screen)
+	quit_to_title_button.pressed.connect(quit_to_title)
+	menu_button.pressed.connect(show_system_menu)
+	
+	
 	pass
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause") or event.is_action_pressed("ui_cancel") and system.visible != true:
+		get_viewport().set_input_as_handled()
+		get_tree().paused = false
+		queue_free()
+	elif event.is_action_pressed("ui_cancel") and system.visible == true:
+		show_pause_screen()
 	
+	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
+		Messages.controller_changed.emit(event.device)
+	
+	if event is InputEventMouseButton or event is InputEventKey:
+		Messages.controller_changed.emit(event.device)
+	if pause_screen.visible == true:
+		if event.is_action_pressed("right") or event.is_action_pressed("down"):
+			menu_button.grab_focus()
+	pass
+
+
+func show_pause_screen() -> void:
+	pause_screen.visible = true
+	system.visible = false
+	pass
+
+
+func show_system_menu() -> void:
+	pause_screen.visible = false
+	system.visible = true
+	return_button.grab_focus()
+	pass
+
+
+func quit_to_title() -> void:
+	get_tree().paused = false
+	queue_free()
+	SceneManager.transition_scene("res://title_screen/Title_screen.tscn", "", Vector2.ZERO, "up")
 	pass

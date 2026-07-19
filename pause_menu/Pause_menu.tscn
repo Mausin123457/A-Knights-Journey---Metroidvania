@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cq5otw5foxyq0"]
 
 [ext_resource type="Script" uid="uid://d0x6dp76ce4cr" path="res://pause_menu/scripts/pause_menu.gd" id="1_671oy"]
+[ext_resource type="PackedScene" uid="uid://d2xbn8d6cmweq" path="res://pause_menu/map_node.tscn" id="2_m0lvv"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1069872174]
 process_mode = 3
@@ -57,6 +58,10 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 
+[node name="MapNode" parent="Control/PauseScreen/Map" unique_id=299082830 instance=ExtResource("2_m0lvv")]
+modulate = Color(0.49411765, 0.8509804, 0.34117648, 1)
+layout_mode = 0
+
 [node name="Label" type="Label" parent="Control/PauseScreen" unique_id=374693163]
 layout_mode = 0
 offset_left = 10.0
@@ -107,14 +112,14 @@ theme_override_constants/separation = 15
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/System/VBoxContainer" unique_id=1867790840]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/System/VBoxContainer/HBoxContainer" unique_id=993293383]
-custom_minimum_size = Vector2(50, 0)
+[node name="Label" type="Label" parent="Control/System/VBoxContainer/HBoxContainer" unique_id=751534749]
+custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
 
 [node name="ReturnButton" type="Button" parent="Control/System/VBoxContainer/HBoxContainer" unique_id=1295259711]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Return"
+text = "Return to Map"
 
 [node name="Label2" type="Label" parent="Control/System/VBoxContainer/HBoxContainer" unique_id=2082813631]
 custom_minimum_size = Vector2(10, 0)
