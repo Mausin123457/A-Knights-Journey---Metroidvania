@@ -57,7 +57,8 @@ var original_sprite_pos: Vector2
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("action"):
-		Messages.player_interacted.emit(self)
+		Messages.player_interacted.emit(self, event)
+		Messages.input_hint_changed.emit("interact")
 	elif event.is_action_pressed("pause"):
 		get_tree().paused = true
 		var pause_menu: PauseMenu = load("res://pause_menu/Pause_menu.tscn").instantiate()

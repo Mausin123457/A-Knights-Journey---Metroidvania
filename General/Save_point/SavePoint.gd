@@ -25,9 +25,17 @@ func _on_player_exited(_n: Node2D) -> void:
 	pass
 
 
-func _on_player_interacted(player: Player) -> void:
+func _on_player_interacted(player: Player, event: InputEvent) -> void:
 	Messages.player_healed.emit(5)
 	SaveManager.save_game()
 	animation_player.play("game_saved")
 	animation_player.seek(0)
+	
+	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
+		print("called!")
+		Messages.controller_changed.emit(event.device)
+	
+	if event is InputEventMouseButton or event is InputEventKey:
+		print("called!")
+		Messages.controller_changed.emit(event.device)
 	pass

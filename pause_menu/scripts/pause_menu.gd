@@ -47,9 +47,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	if event is InputEventMouseButton or event is InputEventKey:
 		Messages.controller_changed.emit(event.device)
-	if pause_screen.visible == true:
-		if event.is_action_pressed("right") or event.is_action_pressed("down"):
-			menu_button.grab_focus()
 	pass
 
 
