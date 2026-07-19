@@ -87,8 +87,6 @@ func show_load_game_menu() -> void:
 	
 	load_slot_1.grab_focus()
 	
-	back_button.pressed.connect(show_main_menu)
-	
 	load_slot_1.disabled = not SaveManager.save_file_exists(0)
 	
 	load_slot_2.disabled = not SaveManager.save_file_exists(1)

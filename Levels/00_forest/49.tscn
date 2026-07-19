@@ -115,7 +115,7 @@ height = 878
 metadata/_custom_type_script = "uid://djt425qri8v8e"
 
 [node name="LevelTransition" parent="." unique_id=1901101309 instance=ExtResource("5_l10bc")]
-position = Vector2(40, 262)
+position = Vector2(-94, 561)
 size = 4
 location = 0
 target_level = "uid://dbxvwenvdndx4"

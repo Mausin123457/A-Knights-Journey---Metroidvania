@@ -15,6 +15,7 @@ func _ready() -> void:
 
 func _on_player_entered(_n: Node2D) -> void:
 	Messages.player_interacted.connect(_on_player_interacted)
+	
 	Messages.input_hint_changed.emit("interact")
 	pass
 
@@ -25,7 +26,7 @@ func _on_player_exited(_n: Node2D) -> void:
 	pass
 
 
-func _on_player_interacted(player: Player, event: InputEvent) -> void:
+func _on_player_interacted(_player: Player, event: InputEvent) -> void:
 	Messages.player_healed.emit(5)
 	SaveManager.save_game()
 	animation_player.play("game_saved")

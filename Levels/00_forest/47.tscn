@@ -110,18 +110,19 @@ position = Vector2(92, 273)
 z_index = 256
 position = Vector2(-88, -304)
 script = ExtResource("4_tnbsn")
-width = 2048
-height = 878
+width = 544
+height = 1070
 metadata/_custom_type_script = "uid://djt425qri8v8e"
 
 [node name="LevelTransition" parent="." unique_id=1901101309 instance=ExtResource("5_y0yme")]
-position = Vector2(27, 272)
+position = Vector2(-58, 755)
 size = 4
 location = 0
 target_level = "uid://cvgsrlj7isd00"
 target_area_name = "LevelTransition2"
 
 [node name="LevelTransition2" parent="." unique_id=1511852765 instance=ExtResource("5_y0yme")]
-position = Vector2(711, 279)
+position = Vector2(206, -101)
 size = 4
+location = 2
 target_level = "uid://dbxvwenvdndx4"
