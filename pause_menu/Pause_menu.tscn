@@ -93,18 +93,16 @@ grow_vertical = 2
 
 [node name="Map" type="Control" parent="Control/PauseScreen" unique_id=137642210]
 anchors_preset = 0
-offset_left = 135.0
+offset_left = 20.0
 offset_top = 28.0
-offset_right = 436.0
-offset_bottom = 185.0
+offset_right = 470.0
+offset_bottom = 206.0
 
 [node name="ColorRect" type="ColorRect" parent="Control/PauseScreen/Map" unique_id=2021879375]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -1.0
-offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.22745098, 0.22745098, 0.22745098, 1)
@@ -112,10 +110,10 @@ color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 [node name="MapNode" parent="Control/PauseScreen/Map" unique_id=299082830 instance=ExtResource("2_m0lvv")]
 modulate = Color(0.49411765, 0.8509804, 0.34117648, 1)
 layout_mode = 0
-offset_left = 28.0
-offset_top = 23.0
-offset_right = 79.0
-offset_bottom = 45.0
+offset_left = 63.0
+offset_top = 43.0
+offset_right = 114.0
+offset_bottom = 65.0
 linked_scene = "uid://cvgsrlj7isd00"
 entrances_top = Array[float]([])
 entrances_right = Array[float]([17.0, 5.8])
@@ -125,10 +123,10 @@ entrances_left = Array[float]([2.0])
 [node name="MapNode9" parent="Control/PauseScreen/Map" unique_id=1328777419 instance=ExtResource("2_m0lvv")]
 modulate = Color(0.49411765, 0.8509804, 0.34117648, 1)
 layout_mode = 0
-offset_left = 95.0
-offset_top = 14.0
-offset_right = 115.0
-offset_bottom = 37.0
+offset_left = 130.0
+offset_top = 34.0
+offset_right = 150.0
+offset_bottom = 57.0
 linked_scene = "uid://c36ggihddm1tm"
 entrances_top = Array[float]([])
 entrances_right = Array[float]([6.649866])
@@ -138,10 +136,10 @@ entrances_left = Array[float]([])
 [node name="MapNode2" parent="Control/PauseScreen/Map" unique_id=996421134 instance=ExtResource("2_m0lvv")]
 modulate = Color(0.49411765, 0.8509804, 0.34117648, 1)
 layout_mode = 0
-offset_left = 80.0
-offset_top = 38.0
-offset_right = 115.0
-offset_bottom = 59.0
+offset_left = 115.0
+offset_top = 58.0
+offset_right = 150.0
+offset_bottom = 79.0
 linked_scene = "uid://c0kgtnhwnmy3q"
 entrances_top = Array[float]([16.675])
 entrances_right = Array[float]([2.0, 16.0])
@@ -151,10 +149,10 @@ entrances_left = Array[float]([2.0, 16.0])
 [node name="MapNode5" parent="Control/PauseScreen/Map" unique_id=5217838 instance=ExtResource("2_m0lvv")]
 modulate = Color(0.49411765, 0.8509804, 0.34117648, 1)
 layout_mode = 0
-offset_left = 116.0
-offset_top = 13.0
-offset_right = 132.0
-offset_bottom = 45.0
+offset_left = 151.0
+offset_top = 33.0
+offset_right = 167.0
+offset_bottom = 65.0
 linked_scene = "uid://dcqjqeuf715td"
 entrances_top = Array[float]([])
 entrances_right = Array[float]([4.25])
@@ -164,10 +162,10 @@ entrances_left = Array[float]([27.0, 7.5249996])
 [node name="MapNode6" parent="Control/PauseScreen/Map" unique_id=1310635567 instance=ExtResource("2_m0lvv")]
 modulate = Color(0.49411765, 0.8509804, 0.34117648, 1)
 layout_mode = 0
-offset_left = 133.0
-offset_top = 14.0
-offset_right = 150.0
-offset_bottom = 24.0
+offset_left = 168.0
+offset_top = 34.0
+offset_right = 185.0
+offset_bottom = 44.0
 linked_scene = "uid://bitkok0q15as7"
 entrances_top = Array[float]([])
 entrances_right = Array[float]([])
@@ -177,10 +175,10 @@ entrances_left = Array[float]([3.275])
 [node name="MapNode7" parent="Control/PauseScreen/Map" unique_id=1879460530 instance=ExtResource("2_m0lvv")]
 modulate = Color(0.49411765, 0.8509804, 0.34117648, 1)
 layout_mode = 0
-offset_left = 116.0
-offset_top = 50.0
-offset_right = 167.0
-offset_bottom = 59.0
+offset_left = 151.0
+offset_top = 70.0
+offset_right = 202.0
+offset_bottom = 79.0
 linked_scene = "uid://cyw2lth5qf3rf"
 entrances_top = Array[float]([])
 entrances_right = Array[float]([3.3000002])
@@ -190,10 +188,10 @@ entrances_left = Array[float]([4.0])
 [node name="MapNode8" parent="Control/PauseScreen/Map" unique_id=1585687997 instance=ExtResource("2_m0lvv")]
 modulate = Color(0.49411765, 0.8509804, 0.34117648, 1)
 layout_mode = 0
-offset_left = 168.0
-offset_top = 40.0
-offset_right = 198.0
-offset_bottom = 59.0
+offset_left = 203.0
+offset_top = 60.0
+offset_right = 233.0
+offset_bottom = 79.0
 linked_scene = "uid://ba1u754nbgoqc"
 entrances_top = Array[float]([])
 entrances_right = Array[float]([12.7])
@@ -203,10 +201,10 @@ entrances_left = Array[float]([13.0])
 [node name="MapNode3" parent="Control/PauseScreen/Map" unique_id=2053372967 instance=ExtResource("2_m0lvv")]
 modulate = Color(0.49411765, 0.8509804, 0.34117648, 1)
 layout_mode = 0
-offset_left = 28.0
-offset_top = 47.0
-offset_right = 79.0
-offset_bottom = 63.0
+offset_left = 63.0
+offset_top = 67.0
+offset_right = 114.0
+offset_bottom = 83.0
 linked_scene = "uid://cwpibjs3r6aaw"
 entrances_top = Array[float]([])
 entrances_right = Array[float]([6.9750004])
@@ -216,10 +214,10 @@ entrances_left = Array[float]([11.0])
 [node name="MapNode4" parent="Control/PauseScreen/Map" unique_id=549990551 instance=ExtResource("2_m0lvv")]
 modulate = Color(0.49411765, 0.8509804, 0.34117648, 1)
 layout_mode = 0
-offset_left = -8.0
-offset_top = 49.0
-offset_right = 27.0
-offset_bottom = 63.0
+offset_left = 27.0
+offset_top = 69.0
+offset_right = 62.0
+offset_bottom = 83.0
 linked_scene = "uid://bhwip51p37bty"
 entrances_top = Array[float]([])
 entrances_right = Array[float]([9.0])
@@ -242,10 +240,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -3.0
-offset_top = -3.0
-offset_right = 3.0
-offset_bottom = 3.0
+offset_left = 25.0
+offset_top = 17.0
+offset_right = 31.0
+offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_b7hpn")
@@ -253,22 +251,6 @@ texture = SubResource("GradientTexture2D_b7hpn")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/PauseScreen/Map/PlayerIndicator" unique_id=1945295963]
 libraries/ = SubResource("AnimationLibrary_p2w0o")
 autoplay = &"default"
-
-[node name="Label" type="Label" parent="Control/PauseScreen" unique_id=374693163]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 7.0
-offset_right = 69.0
-offset_bottom = 22.0
-text = "Abilities"
-
-[node name="Label2" type="Label" parent="Control/PauseScreen" unique_id=195448440]
-layout_mode = 0
-offset_left = 134.0
-offset_top = 6.0
-offset_right = 174.0
-offset_bottom = 21.0
-text = "Map"
 
 [node name="MenuButton" type="Button" parent="Control/PauseScreen" unique_id=216006823]
 unique_name_in_owner = true
@@ -278,6 +260,56 @@ offset_top = 209.0
 offset_right = 475.0
 offset_bottom = 232.0
 text = "Menu"
+
+[node name="MapButton" type="Button" parent="Control/PauseScreen" unique_id=293850285]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 9.0
+offset_top = -3.0
+offset_right = 47.0
+offset_bottom = 20.0
+text = "Map"
+
+[node name="AbilitiesButton" type="Button" parent="Control/PauseScreen" unique_id=1030562600]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 408.0
+offset_top = -3.0
+offset_right = 475.0
+offset_bottom = 20.0
+text = "Abilities"
+
+[node name="Abilities" type="Control" parent="Control/PauseScreen" unique_id=316384345]
+visible = false
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 28.0
+offset_right = 470.0
+offset_bottom = 206.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PauseScreen/Abilities" unique_id=1429907893]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/PauseScreen/Abilities/VBoxContainer" unique_id=130616259]
+layout_mode = 2
+text = "Attack"
+
+[node name="Label2" type="Label" parent="Control/PauseScreen/Abilities/VBoxContainer" unique_id=1990179476]
+layout_mode = 2
+text = "Parry"
+
+[node name="Label3" type="Label" parent="Control/PauseScreen/Abilities/VBoxContainer" unique_id=173592022]
+layout_mode = 2
+text = "Dash"
+
+[node name="Label4" type="Label" parent="Control/PauseScreen/Abilities/VBoxContainer" unique_id=478530510]
+layout_mode = 2
+text = "Wall jump"
 
 [node name="System" type="Control" parent="Control" unique_id=1751025948]
 visible = false

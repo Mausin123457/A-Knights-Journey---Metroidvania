@@ -10,6 +10,11 @@ class_name PauseMenu extends CanvasLayer
 @onready var sfx_slider: HSlider = %SFXSlider
 @onready var ui_slider: HSlider = %UISlider
 @onready var pause_menu: PauseMenu = $"."
+@onready var map: Control = $Control/PauseScreen/Map
+@onready var map_button: Button = %MapButton
+@onready var abilities_button: Button = %AbilitiesButton
+@onready var abilities: Control = $Control/PauseScreen/Abilities
+
 #endregion
 
 var player: Player
@@ -24,8 +29,8 @@ func _ready() -> void:
 	return_button.pressed.connect(show_pause_screen)
 	quit_to_title_button.pressed.connect(quit_to_title)
 	menu_button.pressed.connect(show_system_menu)
-	
-	
+	map_button.pressed.connect(show_pause_screen)
+	abilities_button.pressed.connect(show_abilities)
 	pass
 
 
@@ -51,6 +56,9 @@ func _unhandled_input(event: InputEvent) -> void:
 func show_pause_screen() -> void:
 	pause_screen.visible = true
 	system.visible = false
+	map.visible = true
+	abilities.visible = false
+	map_button.grab_focus()
 	pass
 
 
@@ -60,6 +68,12 @@ func show_system_menu() -> void:
 	return_button.grab_focus()
 	pass
 
+func show_abilities() -> void:
+	pause_screen.visible = true
+	system.visible = false
+	map.visible = false
+	abilities.visible = true
+	pass
 
 func quit_to_title() -> void:
 	get_tree().paused = false
