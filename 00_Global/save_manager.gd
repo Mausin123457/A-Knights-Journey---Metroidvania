@@ -29,8 +29,8 @@ func create_new_game_save(slot: int) -> void:
 	
 	save_data = {
 		"scene_path" : new_game_scene,
-		"x" : 92,
-		"y" : 273,
+		"x" : 192,
+		"y" : 380,
 		"hp" : 5,
 		"max_hp" : 5,
 		"dash" : false,
