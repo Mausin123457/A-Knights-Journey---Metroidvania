@@ -228,10 +228,6 @@ entrances_left = Array[float]([])
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 0
-offset_left = 46.0
-offset_top = 36.0
-offset_right = 46.0
-offset_bottom = 36.0
 
 [node name="TextureRect" type="TextureRect" parent="Control/PauseScreen/Map/PlayerIndicator" unique_id=155279934]
 layout_mode = 1
@@ -240,10 +236,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 25.0
-offset_top = 17.0
-offset_right = 31.0
-offset_bottom = 23.0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 3.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_b7hpn")
