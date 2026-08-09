@@ -11,6 +11,7 @@ const SLOTS: Array[String] = [
 var current_slot : int = 0
 var save_data : Dictionary = {}
 var discovered_areas : Array = []
+var pending_discovered_areas : Array = []
 var persistant_data : Dictionary = {}
 
 
@@ -23,6 +24,7 @@ func _ready() -> void:
 func create_new_game_save(slot: int) -> void:
 	current_slot = slot
 	discovered_areas.clear()
+	pending_discovered_areas.clear()
 	persistant_data.clear()
 	var new_game_scene : String = "uid://cvgsrlj7isd00"
 	discovered_areas.append(new_game_scene)
@@ -50,8 +52,17 @@ func create_new_game_save(slot: int) -> void:
 
 func save_game() -> void:
 	var player: Player = get_tree().get_first_node_in_group("Player")
+	var current_scene_uid: String = SceneManager.current_scene_uid
+	if not discovered_areas.has(current_scene_uid):
+		discovered_areas.append(current_scene_uid)
+
+	for scene_uid in pending_discovered_areas:
+		if not discovered_areas.has(scene_uid):
+			discovered_areas.append(scene_uid)
+	pending_discovered_areas.clear()
+
 	save_data = {
-		"scene_path" : SceneManager.current_scene_uid,
+		"scene_path" : current_scene_uid,
 		"x" : player.global_position.x,
 		"y" : player.global_position.y,
 		"hp" : player.hp,
@@ -79,6 +90,7 @@ func load_game(slot: int) -> void:
 	
 	persistant_data = save_data.get("persistant_data", {})
 	discovered_areas = save_data.get("discovered_areas", [])
+	pending_discovered_areas.clear()
 	var scene_path : String = save_data.get("scene_path", "uid://cvgsrlj7isd00" )
 	SceneManager.transition_scene(scene_path, "", Vector2.ZERO, "up")
 	await SceneManager.new_scene_ready
@@ -119,8 +131,8 @@ func is_area_discovered(scene_uid: String) -> bool:
 
 
 func on_scene_entered(scene_uid: String) -> void:
-	if discovered_areas.has(scene_uid):
+	if discovered_areas.has(scene_uid) or pending_discovered_areas.has(scene_uid):
 		return
 	else:
-		discovered_areas.append(scene_uid)
+		pending_discovered_areas.append(scene_uid)
 	pass
