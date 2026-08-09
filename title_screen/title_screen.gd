@@ -36,6 +36,8 @@ func _ready() -> void:
 	load_slot_2.pressed.connect(on_load_game_pressed.bind(1))
 	load_slot_3.pressed.connect(on_load_game_pressed.bind(2))
 	
+	back_button.pressed.connect(show_main_menu)
+	
 	show_main_menu()
 	pass
 
@@ -64,7 +66,6 @@ func show_new_game_menu() -> void:
 	
 	new_slot_1.grab_focus()
 	
-	back_button.pressed.connect(show_main_menu)
 	
 	if SaveManager.save_file_exists(0):
 		new_slot_1.text = "Replace slot 01"

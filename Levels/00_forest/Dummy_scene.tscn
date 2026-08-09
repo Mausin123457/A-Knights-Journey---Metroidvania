@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cp6kxnf0o5kcf" path="res://Levels/Props/Torch.tscn" id="5_5qsau"]
 [ext_resource type="PackedScene" uid="uid://bhe72lylec405" path="res://Levels/Props/animated_plant.tscn" id="6_5b32x"]
 [ext_resource type="Texture2D" uid="uid://dbb6qj06g0n3i" path="res://Levels/Tilesets/sprites/light_stream.jpg" id="7_x7y2i"]
+[ext_resource type="PackedScene" uid="uid://bvca3053xopfj" path="res://General/Door_and_switch/door.tscn" id="9_vlew5"]
+[ext_resource type="PackedScene" uid="uid://bvkouexjumpmq" path="res://General/Door_and_switch/switch.tscn" id="10_5qsau"]
 
 [sub_resource type="Gradient" id="Gradient_x3n6u"]
 offsets = PackedFloat32Array(0.016826924, 1)
@@ -82,7 +84,7 @@ tile_map_data = PackedByteArray("AAD//w4AAAAOAAYAAAD//w8AAAAOAAcAAAD//xAAAAAOAAg
 tile_set = ExtResource("1_h7q6b")
 
 [node name="PlayerSpawn" type="Node2D" parent="." unique_id=1083342236]
-position = Vector2(300, 374)
+position = Vector2(783, 383)
 script = ExtResource("2_vlew5")
 metadata/_custom_type_script = "uid://dgmhwvvlbf7fa"
 
@@ -182,3 +184,9 @@ rotation = 0.38543397
 scale = Vector2(0.45045176, 3.1485317)
 texture = ExtResource("7_x7y2i")
 offset = Vector2(0, 256)
+
+[node name="Door" parent="." unique_id=1473120071 instance=ExtResource("9_vlew5")]
+position = Vector2(746, 393)
+
+[node name="Switch" parent="Door" unique_id=1925580259 instance=ExtResource("10_5qsau")]
+position = Vector2(-118, -5)

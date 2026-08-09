@@ -7,6 +7,8 @@ class_name Save_Point extends Node2D
 
 
 
+
+
 func _ready() -> void:
 	area_2d.body_entered.connect(_on_player_entered)
 	area_2d.body_exited.connect(_on_player_exited)
@@ -15,7 +17,6 @@ func _ready() -> void:
 
 func _on_player_entered(_n: Node2D) -> void:
 	Messages.player_interacted.connect(_on_player_interacted)
-	
 	Messages.input_hint_changed.emit("interact")
 	pass
 
@@ -32,11 +33,12 @@ func _on_player_interacted(_player: Player, event: InputEvent) -> void:
 	animation_player.play("game_saved")
 	animation_player.seek(0)
 	
+	if area_2d.has_overlapping_areas():
+		Messages.input_hint_changed.emit("interact")
+	
 	if event is InputEventJoypadButton or event is InputEventJoypadMotion:
-		print("called!")
 		Messages.controller_changed.emit(event.device)
 	
 	if event is InputEventMouseButton or event is InputEventKey:
-		print("called!")
 		Messages.controller_changed.emit(event.device)
 	pass
