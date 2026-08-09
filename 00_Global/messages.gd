@@ -5,6 +5,9 @@ extends Node
 signal player_interacted(player: Player)
 
 @warning_ignore("unused_signal")
+signal game_saved()
+
+@warning_ignore("unused_signal")
 signal player_healed(amount: int)
 
 @warning_ignore("unused_signal")

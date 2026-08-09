@@ -26,12 +26,19 @@ func _ready() -> void:
 		label.queue_free()
 		create_transition_blocks()
 		#create and display transition blocks
-		if not SaveManager.is_area_discovered(linked_scene):
-			visible = false
+		#if linked_scene != "uid://cvgsrlj7isd00":
+			#visible = false
 		if SceneManager.current_scene_uid == linked_scene:
 			display_player()
+	Messages.game_saved.connect(show_area)
 	pass 
 
+func show_area() -> void:
+	if not SaveManager.is_area_discovered(linked_scene):
+		visible = false
+		print("change visibility")
+	print("At least i got called")
+	pass
 
 func on_scene_set(value: String) -> void:
 	if linked_scene != value:

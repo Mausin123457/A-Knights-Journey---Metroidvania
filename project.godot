@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Metroidvania Journey"
+config/name="A Knight's Journey"
 run/main_scene="uid://b1skfx7p5ykib"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="uid://7qhm0md225jv"
