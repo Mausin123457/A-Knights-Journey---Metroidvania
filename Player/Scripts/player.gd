@@ -151,9 +151,9 @@ func update_direction() -> void:
 	direction = Vector2(x_axis, y_axis)
 
 	if prev_direction.x != direction.x:
-		if direction.x < 0 and current_state.name != "Crouch":
+		if direction.x < 0:
 			sprite.flip_h = true
-		if direction.x > 0 and current_state.name != "Crouch":
+		if direction.x > 0:
 			sprite.flip_h = false
 
 
