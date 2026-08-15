@@ -11,6 +11,7 @@
 polyphony = 16
 
 [node name="Audio" type="Node" unique_id=418074919]
+process_mode = 3
 script = ExtResource("1_ebapl")
 ui_focus_audio = ExtResource("2_hryst")
 ui_select_audio = ExtResource("3_ktgdv")
@@ -20,13 +21,16 @@ ui_error_audio = ExtResource("6_jlswj")
 
 [node name="Music1" type="AudioStreamPlayer" parent="." unique_id=1818634183]
 unique_name_in_owner = true
+process_mode = 3
 bus = &"Music"
 
 [node name="Music2" type="AudioStreamPlayer" parent="." unique_id=56160302]
 unique_name_in_owner = true
+process_mode = 3
 bus = &"Music"
 
 [node name="UI" type="AudioStreamPlayer" parent="." unique_id=236180454]
 unique_name_in_owner = true
+process_mode = 3
 stream = SubResource("AudioStreamPolyphonic_l67cq")
 bus = &"UI"

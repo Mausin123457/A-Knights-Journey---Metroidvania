@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://cp6kxnf0o5kcf" path="res://Levels/Props/Torch.tscn" id="6_fa1uv"]
 [ext_resource type="PackedScene" uid="uid://bhe72lylec405" path="res://Levels/Props/animated_plant.tscn" id="7_gifbt"]
 [ext_resource type="PackedScene" uid="uid://cpjadv5nutccs" path="res://General/Save_point/00_campfire.tscn" id="9_e0t6d"]
+[ext_resource type="Script" uid="uid://cudvl4kp2tcpt" path="res://Music/MusicTrigger.gd" id="10_336xs"]
+[ext_resource type="AudioStream" uid="uid://642kvicud518" path="res://Music/Forest soundtrack.wav" id="11_abmac"]
+[ext_resource type="PackedScene" uid="uid://cngb2upq6phwg" path="res://00_Global/Audio/SFX_trigger.tscn" id="12_abmac"]
 
 [sub_resource type="Gradient" id="Gradient_g21jb"]
 offsets = PackedFloat32Array(0.016826924, 1)
@@ -225,3 +228,12 @@ offset = Vector2(0, 256)
 
 [node name="Campfire" parent="." unique_id=1895043421 instance=ExtResource("9_e0t6d")]
 position = Vector2(19, -8)
+
+[node name="MusicTrigger" type="Node" parent="." unique_id=2012107119]
+script = ExtResource("10_336xs")
+track = ExtResource("11_abmac")
+metadata/_custom_type_script = "uid://cudvl4kp2tcpt"
+
+[node name="Area2D" parent="." unique_id=1060837428 instance=ExtResource("12_abmac")]
+position = Vector2(12, -9)
+scale = Vector2(1.5, 1.5)

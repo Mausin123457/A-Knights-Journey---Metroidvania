@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bhe72lylec405" path="res://Levels/Props/animated_plant.tscn" id="5_tqmmv"]
 [ext_resource type="PackedScene" uid="uid://cp6kxnf0o5kcf" path="res://Levels/Props/Torch.tscn" id="6_6cl2u"]
 [ext_resource type="Texture2D" uid="uid://dbb6qj06g0n3i" path="res://Levels/Tilesets/sprites/light_stream.jpg" id="7_x3n6u"]
+[ext_resource type="Script" uid="uid://cudvl4kp2tcpt" path="res://Music/MusicTrigger.gd" id="8_ph3v0"]
+[ext_resource type="AudioStream" uid="uid://642kvicud518" path="res://Music/Forest soundtrack.wav" id="9_387fj"]
 
 [sub_resource type="Gradient" id="Gradient_x3n6u"]
 offsets = PackedFloat32Array(0.016826924, 1)
@@ -230,3 +232,8 @@ rotation = 0.35218456
 scale = Vector2(0.31593084, 1.7149987)
 texture = ExtResource("7_x3n6u")
 offset = Vector2(0, 256)
+
+[node name="MusicTrigger" type="Node" parent="." unique_id=232562514]
+script = ExtResource("8_ph3v0")
+track = ExtResource("9_387fj")
+metadata/_custom_type_script = "uid://cudvl4kp2tcpt"

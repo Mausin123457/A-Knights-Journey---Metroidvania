@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cp6kxnf0o5kcf" path="res://Levels/Props/Torch.tscn" id="3_pnjtn"]
 [ext_resource type="Texture2D" uid="uid://dbb6qj06g0n3i" path="res://Levels/Tilesets/sprites/light_stream.jpg" id="4_n7xko"]
 [ext_resource type="Texture2D" uid="uid://be3k02p8uho03" path="res://Player/Sprites_/Spritesheet.png" id="5_lilbj"]
+[ext_resource type="Script" uid="uid://cudvl4kp2tcpt" path="res://Music/MusicTrigger.gd" id="7_aktoa"]
+[ext_resource type="AudioStream" uid="uid://m64qxd2vu6j4" path="res://Music/Main Menu Music.wav" id="8_a5cqm"]
 
 [sub_resource type="Gradient" id="Gradient_x3n6u"]
 offsets = PackedFloat32Array(0.016826924, 1)
@@ -368,3 +370,9 @@ offset_top = 231.0
 offset_right = 404.0
 offset_bottom = 254.0
 text = "Back"
+
+[node name="MusicTrigger" type="Node" parent="." unique_id=1638798525]
+process_mode = 3
+script = ExtResource("7_aktoa")
+track = ExtResource("8_a5cqm")
+metadata/_custom_type_script = "uid://cudvl4kp2tcpt"

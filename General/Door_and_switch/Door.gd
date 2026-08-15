@@ -2,8 +2,8 @@
 @tool
 class_name Door extends Node2D
 
-#NEED TO HAVE AN ACTUAL AUDIO HERE!!
-const DOOR_CRASH_AUDIO = 0
+
+const DOOR_CRASH_AUDIO = preload("uid://mkn4jq0jbh6r")
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
@@ -19,7 +19,7 @@ func _ready() -> void:
 	pass
 
 func on_switch_activated() -> void:
-	#Play audio here!
+	Audio.play_spatial_sound(DOOR_CRASH_AUDIO, global_position)
 	
 	animation_player.play("Opening")
 	pass

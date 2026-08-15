@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dbb6qj06g0n3i" path="res://Levels/Tilesets/sprites/light_stream.jpg" id="7_x7y2i"]
 [ext_resource type="PackedScene" uid="uid://bvca3053xopfj" path="res://General/Door_and_switch/door.tscn" id="9_vlew5"]
 [ext_resource type="PackedScene" uid="uid://bvkouexjumpmq" path="res://General/Door_and_switch/switch.tscn" id="10_5qsau"]
+[ext_resource type="Script" uid="uid://cudvl4kp2tcpt" path="res://Music/MusicTrigger.gd" id="11_x7y2i"]
+[ext_resource type="AudioStream" uid="uid://642kvicud518" path="res://Music/Forest soundtrack.wav" id="12_uq1i2"]
 
 [sub_resource type="Gradient" id="Gradient_x3n6u"]
 offsets = PackedFloat32Array(0.016826924, 1)
@@ -84,7 +86,7 @@ tile_map_data = PackedByteArray("AAD//w4AAAAOAAYAAAD//w8AAAAOAAcAAAD//xAAAAAOAAg
 tile_set = ExtResource("1_h7q6b")
 
 [node name="PlayerSpawn" type="Node2D" parent="." unique_id=1083342236]
-position = Vector2(783, 383)
+position = Vector2(704, 374)
 script = ExtResource("2_vlew5")
 metadata/_custom_type_script = "uid://dgmhwvvlbf7fa"
 
@@ -190,3 +192,8 @@ position = Vector2(746, 393)
 
 [node name="Switch" parent="Door" unique_id=1925580259 instance=ExtResource("10_5qsau")]
 position = Vector2(-118, -5)
+
+[node name="MusicTrigger" type="Node" parent="." unique_id=1433659941]
+script = ExtResource("11_x7y2i")
+track = ExtResource("12_uq1i2")
+metadata/_custom_type_script = "uid://cudvl4kp2tcpt"

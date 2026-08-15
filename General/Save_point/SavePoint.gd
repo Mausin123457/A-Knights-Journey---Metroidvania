@@ -9,6 +9,7 @@ class_name Save_Point extends Node2D
 
 
 
+
 func _ready() -> void:
 	area_2d.body_entered.connect(_on_player_entered)
 	area_2d.body_exited.connect(_on_player_exited)
@@ -31,6 +32,7 @@ func _on_player_interacted(_player: Player, event: InputEvent) -> void:
 	Messages.player_healed.emit(5)
 	SaveManager.save_game()
 	Messages.game_saved.emit()
+	Audio.play_ui_select_audio()
 	animation_player.play("game_saved")
 	animation_player.seek(0)
 	

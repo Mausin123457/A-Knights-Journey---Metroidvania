@@ -39,7 +39,6 @@ func _ready() -> void:
 	back_button.pressed.connect(show_main_menu)
 	
 	Audio.setup_button_audio(self)
-	
 	show_main_menu()
 	pass
 

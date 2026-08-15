@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cngb2upq6phwg"]
+
+[ext_resource type="Script" uid="uid://cqjhj5cfqcj8h" path="res://00_Global/Audio/sfx_trigger.gd" id="1_21u37"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b7hpn"]
+size = Vector2(275, 131.5)
+
+[node name="Area2D" type="Area2D" unique_id=1060837428]
+collision_layer = 0
+collision_mask = 16
+monitorable = false
+script = ExtResource("1_21u37")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1063975495]
+position = Vector2(0, -66)
+shape = SubResource("RectangleShape2D_b7hpn")
+debug_color = Color(0, 0, 0, 0.41960785)

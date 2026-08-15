@@ -3,8 +3,7 @@ class_name Switch extends Node2D
 
 signal activated
 
-#NEED ACTUAL AUDIO HERE!!!
-const DOOR_SWITCH_AUDIO = 0
+const DOOR_SWITCH_AUDIO = preload("uid://bylovy170q0in")
 
 var is_open: bool = false
 
@@ -36,7 +35,7 @@ func on_player_exited(_n: Node2D) -> void:
 
 
 func on_player_interacted(_player: Player, _event) -> void:
-	#play audio
+	Audio.play_spatial_sound(DOOR_SWITCH_AUDIO, global_position)
 	SaveManager.persistant_data[unique_name()] = "open"
 	activated.emit()
 	set_open()

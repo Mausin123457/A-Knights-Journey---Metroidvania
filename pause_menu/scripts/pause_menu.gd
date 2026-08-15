@@ -22,8 +22,6 @@ var player: Player
 func _ready() -> void:
 	if pause_menu.visible == true:
 		PlayerHud.visible = false
-	else:
-		PlayerHud.visible = true
 	
 	show_pause_screen()
 	return_button.pressed.connect(show_pause_screen)
@@ -31,6 +29,7 @@ func _ready() -> void:
 	menu_button.pressed.connect(show_system_menu)
 	map_button.pressed.connect(show_pause_screen)
 	abilities_button.pressed.connect(show_abilities)
+	Audio.setup_button_audio(self)
 	pass
 
 
@@ -38,6 +37,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause") or event.is_action_pressed("ui_cancel") and system.visible != true:
 		get_viewport().set_input_as_handled()
 		get_tree().paused = false
+		PlayerHud.visible = true
 		queue_free()
 	elif event.is_action_pressed("ui_cancel") and system.visible == true:
 		show_pause_screen()
